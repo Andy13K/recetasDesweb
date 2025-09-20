@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 const { width } = Dimensions.get('window');
-const cardWidth = (width - 30) / 2;
+const cardWidth = (width - 40) / 2;
 
 const RecipeCard = ({ recipe, onPress }) => {
   return (
@@ -45,23 +45,25 @@ const styles = StyleSheet.create({
   card: {
     width: cardWidth,
     backgroundColor: '#fff',
-    borderRadius: 15,
-    margin: 5,
-    shadowColor: '#000',
+    borderRadius: 18,
+    marginVertical: 8,
+    marginHorizontal: 5,
+    shadowColor: '#ff6b35',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 6,
     },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 8,
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 12,
     overflow: 'hidden',
     borderWidth: 2,
     borderColor: '#ff6b35',
+    alignSelf: 'center',
   },
   imageContainer: {
     position: 'relative',
-    height: 120,
+    height: 130,
   },
   image: {
     width: '100%',
@@ -69,21 +71,26 @@ const styles = StyleSheet.create({
   },
   overlay: {
     position: 'absolute',
-    top: 8,
-    right: 8,
+    top: 10,
+    right: 10,
   },
   categoryBadge: {
-    backgroundColor: 'rgba(255, 107, 53, 0.9)',
+    backgroundColor: 'rgba(255, 107, 53, 0.95)',
     color: '#fff',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 12,
-    fontSize: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 15,
+    fontSize: 11,
     fontWeight: 'bold',
+    textShadowColor: 'rgba(0, 0, 0, 0.3)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
   content: {
     padding: 12,
-    minHeight: 80,
+    minHeight: 90,
+    backgroundColor: '#fff',
+    justifyContent: 'space-between',
   },
   title: {
     fontSize: 14,
@@ -91,6 +98,7 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 18,
     marginBottom: 8,
+    textAlign: 'center',
   },
   details: {
     marginTop: 'auto',
@@ -98,16 +106,22 @@ const styles = StyleSheet.create({
   area: {
     fontSize: 12,
     color: '#666',
-    marginBottom: 4,
+    marginBottom: 6,
+    fontWeight: '500',
+    textAlign: 'center',
   },
   tapText: {
     fontSize: 10,
     color: '#ff6b35',
-    fontWeight: '600',
+    fontWeight: 'bold',
     textAlign: 'center',
+    backgroundColor: '#fff8f0',
+    paddingVertical: 4,
+    paddingHorizontal: 6,
+    borderRadius: 8,
   },
   decorativeBorder: {
-    height: 3,
+    height: 4,
     backgroundColor: '#ff6b35',
   },
 });

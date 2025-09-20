@@ -11,6 +11,7 @@ import {
   StatusBar,
   Animated,
 } from 'react-native';
+import Footer from './Footer';
 
 const RandomRecipeScreen = ({ route, navigation }) => {
   const [randomRecipe, setRandomRecipe] = useState(null);
@@ -173,6 +174,8 @@ const RandomRecipeScreen = ({ route, navigation }) => {
             </View>
           </View>
         </Animated.View>
+        
+        <Footer />
       </ScrollView>
     </View>
   );
@@ -218,7 +221,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   scrollContainer: {
-    paddingBottom: 20,
+    paddingBottom: 0,
   },
   content: {
     flex: 1,
